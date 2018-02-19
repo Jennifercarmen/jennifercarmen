@@ -1,45 +1,69 @@
+'use strict';
 
-const getInitialScroll = () => document.documentElement.scrollTop;
-const getFinalScroll = element => Math.floor(element.getBoundingClientRect().top + getInitialScroll());
+var getInitialScroll = function getInitialScroll() {
+  return document.documentElement.scrollTop;
+};
+var getFinalScroll = function getFinalScroll(element) {
+  return Math.floor(element.getBoundingClientRect().top + getInitialScroll());
+};
 
-const animatedScrollTo = (targetElement,time) => {
-  let initialPosition = getInitialScroll(),
+var animatedScrollTo = function animatedScrollTo(targetElement, time) {
+  var initialPosition = getInitialScroll(),
       finalPosition = getFinalScroll(targetElement),
       distanceToScroll = finalPosition - initialPosition,
       scrollFragment = Math.ceil(distanceToScroll / time);
   animateScroll(scrollFragment, finalPosition);
 };
 
-const animateScroll = (scrollFragment,finalPosition) => {
-  let animatedScroll = setInterval(function(){
+var animateScroll = function animateScroll(scrollFragment, finalPosition) {
+  var animatedScroll = setInterval(function () {
     document.documentElement.scrollTop += scrollFragment;
     if (scrollFragment > 0) {
-      if (document.documentElement.scrollTop > finalPosition - (scrollFragment / 2)) clearInterval(animatedScroll)
+      if (document.documentElement.scrollTop > finalPosition - scrollFragment / 2) clearInterval(animatedScroll);
     } else {
-      if (document.documentElement.scrollTop < finalPosition - (scrollFragment / 2)) clearInterval(animatedScroll)
+      if (document.documentElement.scrollTop < finalPosition - scrollFragment / 2) clearInterval(animatedScroll);
     }
-
-  },1);
+  }, 1);
 };
 
-const animatedScrollEvent = (originElement,time) => {
+var animatedScrollEvent = function animatedScrollEvent(originElement, time) {
   if (originElement.tagName === 'A' && originElement.hash !== '') {
-    let targetElement = document.getElementById(originElement.hash.slice(1));
-    originElement.addEventListener('click', e => {
+    var targetElement = document.getElementById(originElement.hash.slice(1));
+    originElement.addEventListener('click', function (e) {
       e.preventDefault();
-      animatedScrollTo(targetElement,time)
-    })
+      animatedScrollTo(targetElement, time);
+    });
   }
 };
 
-const animatedScrollAllLinks = time => {
-  let links = document.links;
-  for (let link of links) {
-    animatedScrollEvent(link,time)
+var animatedScrollAllLinks = function animatedScrollAllLinks(time) {
+  var links = document.links;
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = links[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var link = _step.value;
+
+      animatedScrollEvent(link, time);
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
   }
 };
 
 animatedScrollAllLinks(200);
 
 // animatedScrollEvent(document.getElementById('link2'),500);
-

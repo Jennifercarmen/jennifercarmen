@@ -12,6 +12,36 @@ html {
   width: 100%;
   height: 100%;
 }
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+.perfil{
+    width: 45%;
+}
+#mainNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  color: black;
+  background-color: transparent;
+  box-shadow: none;
+}
+nav ul a{
+  color: black;
+}
+  #mainNav.navbar-shrink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    color: white;
+  }
 
 h1,
 h2,
@@ -52,69 +82,6 @@ a:focus, a:hover {
   color: #1d9b6c;
 }
 
-#mainNav {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: black;
-}
-
-#mainNav .navbar-toggler {
-  font-size: 14px;
-  padding: 11px;
-  color: white;
-  border: 1px solid white;
-}
-
-#mainNav .navbar-brand {
-  font-weight: 700;
-}
-
-
-#mainNav .navbar-nav .nav-item {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-
-#mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
-  outline: none;
-  background-color: transparent;
-}
-
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-  outline: none;
-  background-color: transparent;
-}
-
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-    letter-spacing: 1px;
-    border-bottom: none;
-    background: transparent;
-  }
-  #mainNav.navbar-shrink {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    background: black;
-    color: white;
-  }
-  #mainNav .nav-link.active {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  #mainNav .nav-link.active:hover {
-    color: white;
-  }
-}
 
 .masthead {
   display: table;
@@ -123,7 +90,7 @@ a:focus, a:hover {
   padding: 200px 0;
   text-align: center;
   color: black;
-  background: url("../assets/images/background.jpg") no-repeat bottom center scroll;
+  background: url("../assets/images/presentacion.jpg") no-repeat bottom center scroll;
   background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -136,22 +103,21 @@ a:focus, a:hover {
   vertical-align: middle;
 }
 
-.masthead .intro-body .brand-heading {
-  font-size: 50px;
-}
 
-.masthead .intro-body .intro-text {
-  font-size: 18px;
-}
 
+.intro-text{
+  color: #bb014c;
+}
+.mx-auto {
+  box-shadow: 10px 5px 5px #e8d6d2;
+  background-color: rgba(221, 150, 156, 0.51);
+}
 @media (min-width: 768px) {
   .masthead {
     height: 100%;
     padding: 0;
   }
-  .masthead .intro-body .brand-heading {
-    font-size: 100px;
-  }
+
   .masthead .intro-body .intro-text {
     font-size: 22px;
   }
@@ -166,14 +132,12 @@ a:focus, a:hover {
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  color: white;
   border: 2px solid white;
   border-radius: 100% !important;
   background: transparent;
 }
 
 .btn-circle:focus, .btn-circle:hover {
-  color: white;
   outline: none;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -277,4 +241,17 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+.skill{
+  padding: 80px 0px;
+  background-color: #1712126e;
+  color: white;
+}
+ .card-content {
+
+  height: 250px;
+}
+
+.about{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
