@@ -7,18 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Jennifer Carmen</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link type="text/css" rel="stylesheet" href="vendors/materialize/css/materialize.min.css" media="screen,projection" />
   <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
   <link href="css/main.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
-
 <!-- Navigation -->
 <nav id="mainNav">
+  <div class="container">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo"></a>
+    <a href="#main" class="brand-logo">
+        <img src="assets/images/logo.png">
+    </a>
     <a href="#" data-activates="mobile-demo" class="button-collapse">
       <i class="material-icons">menu</i>
     </a>
@@ -50,48 +54,64 @@
         <a href="#contact">CONTACTO</a>
       </li>
     </ul>
-   
+  </div>
   </div>
 </nav>
 
 <!-- Intro Header -->
 
-<header class="masthead">
+<header class="masthead" id="main">
   <div class="intro-body">
-    <div class="container">
+      <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="mx-auto">
           <br>
-          <h3 class="brand-heading">Jennifer Carmen</h3>
-          <p class="intro-text">Front-End Developer
-            <a href="#about" class="btn btn-circle js-scroll-trigger">
-              <i class="fa fa-angle-double-down animated"></i>
-            </a>
+          <span class="brand-heading">Jennifer Carmen</span>
+          <p class="intro-text">Front-end Developer
+            </p>
+          <br>
+            <div class="page-scroll learn-more ">
+                <a href="#about" class="js-scroll-trigger">Conoce más de mi<br>
+                  <i class="fa fa-chevron-down animated"></i>
+                </a></div>
+        </div>
         </div>
       </div>
     </div>
+
   </div>
 </header>
-
 <!-- About Section -->
 
   <section id="about" class="content-section text-center">
       <div class="container">
           <div class="row ">
             <div class="col s12 m6 center-align">
-                <img src="assets/images/jennifercarmen.jpg" class="perfil responsive-img" alt="Cinque Terre">
+                <img src="assets/images/jennifercarmen.jpg" class="perfil responsive-img circle" alt="Cinque Terre">
               </div>			
-            <div class="col s12 m6 smoo">
-                <h2 class="text-center">Sobre mí</h2>
+            <div class="col s12 m6">
+                <h2 class="text-center smoo">Sobre mí</h2>
                 <p class="text-justify">
                   ¡HOLA!
-                  Mi nombre es Jennifer, Front-end Developer egresada de Laboratoria y técnica en computación e informática
-                  
-                  Me considero una persona creativa, comprometida y trato de plasmar en mis proyectos parte de ello. 
-                                
-                 Apasionada por la tecnología, en mis tiempos libres disfruto de aprender a tocar instrumentos musicales como la guitarra.</p>
+                  Mi nombre es Jennifer,Front-end developer  de Laboratoria y técnica en computación e informática, empecé aprender código y amarlo desde que tengo 17 años , siempre estoy buscando aprender y mejorar mi capacidad para desarrollar productos digitales .
+ 
+Soy una profesional responsable, analítica y comprometida, me gusta trabajar en equipo y asumir nuevos retos Poseo un carácter dinámico, apasionado y optimista , aspiro a ser Full stack en el futuro y  en mis tiempos libres amo aprender a tocar instrumentos musicales.</p>
 
-              </p>					
+              </p>
+              <div class="row">
+                <div class="col-12">
+                  <h5 class="smoo">Reconocimientos obtenidos</h5>
+                  <h6 class="smoo">Bootcamp Laboratoria 2017-2</h6>
+                </div>
+                <div class="col s12 col  text-center m4">
+                  <img class="img-fluid" src="assets/images/squad.png" alt="Mejor Squad">
+                  <p>Mejor Squad</p>
+                </div>
+                <div class="col s12 text-center m4">
+                  <img class="img-fluid" src="assets/images/top_5.png" alt="Una de las 5 mejores">
+                  <p>Una de las 5 mejores</p>
+                </div>
+              </div>					
             </div>
           </div>
         </div>
@@ -99,17 +119,17 @@
   </section>
 
   <!-- Download Section -->
-  <section id="skill" class="download-section content-section text-center">
-      <div class="skill">
+  <section id="skill" class="skill-section content-section text-center">
+  <div class="skill">
     <div class="container">
       <div class="col-lg-8 s">
-        <h2>HABILIDADES</h2>
-        <a class="btn btn-default btn-lg">HTML 5</a>
-        <a class="btn btn-default btn-lg">CSS 3</a>
-        <a class="btn btn-default btn-lg">JavaScript</a>
-        <a class="btn btn-default btn-lg">Jquery</a>
-        <a class="btn btn-default btn-lg">Firebase</a>
-        <a class="btn btn-default btn-lg">PHP</a>
+        <h2 class="text-white">Tech Skills</h2>
+        <div class="row">
+          <div class="col s12 l12">
+              <img src="assets/images/tech.png" alt="">
+
+          </div>
+        </div>
 
       </div>
     </div>
@@ -131,7 +151,8 @@
               </div>
               <div class="card-content">
                 <span class="card-title activator">Red Social<i class="material-icons right">more_vert</i></span>
-                <p><a href="https://github.com/nerdale/awesome-rank" target="_blank" class="code">Demo</a></p>
+                <p><a href="https://jennifercarmen.github.io/weTravel-app/views/main.html" target="_blank" class="code">Demo</a></p>
+                <img src="assets/images/red_social.png" class="responsive-img">
               </div>
               <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -145,8 +166,9 @@
                 <img class="activator" src="">
               </div>
               <div class="card-content">
-                <span class="card-title activator">Dashboard<i class="material-icons right">more_vert</i></span>
-                <p><a href="https://github.com/nerdale/lyft-challenge" target="_blank" class="code">Demo</a> </p>
+                <span class="card-title activator">E-commerce<i class="material-icons right">more_vert</i></span>
+                <p><a href="https://e-commerce-7a2d6.firebaseapp.com/" target="_blank" class="code">Demo</a> </p>
+                <img src="assets/images/ecommerce.PNG" class="responsive-img">
               </div>
               <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -161,7 +183,9 @@
               </div>
               <div class="card-content">
                 <span class="card-title activator">Weather<i class="material-icons right">more_vert</i></span>
-                <p><a href="https://github.com/nerdale/proyecto-airbnb" target="_blank" class="code">Demo</a>
+                <p><a href="https://jennifercarmen.github.io/api-weather/" target="_blank" class="code">Demo</a>
+                  <img src="assets/images/weater.PNG" class="responsive-img">
+
               </div>
               <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -174,53 +198,31 @@
   <!-- Contact Section -->
   <section id="contact" class="content-section text-center">
     <div class="container">
-          <h2>Contacto</h2>
+          <h2 class="white-text">Contacto</h2>
           <p>Contáctate a jennifercarmens@gmail.com o sígueme en:</p>
           <div class="row">
-            <div class="col m1"></div>
+            <div class="col m3"></div>
               <ul class="list-inline banner-social-buttons">
                   <li class="list-inline-item col m3">
-                    <a href="" class="btn btn-default btn-lg">
+                    <a href="https://www.linkedin.com/in/jennifercarmen/" target="_blank" class="btn btn-default btn-lg">
                       <i class="fa fa-linkedin fa-fw"></i>
                       <span class="network-name">Linkedin</span>
                     </a>
                   </li>
                   <li class="list-inline-item col m3">
-                    <a href="" class="btn btn-default btn-lg">
+                    <a href="https://github.com/Jennifercarmen/" target="_blank" class="btn btn-default btn-lg">
                       <i class="fa fa-github fa-fw"></i>
                       <span class="network-name">Github</span>
                     </a>
                   </li>
-                  <li class="list-inline-item col m3">
-                    <a href="" class="btn btn-default btn-lg">
-                      <i class="fa fa-google-plus fa-fw"></i>
-                      <span class="network-name">Google+</span>
-                    </a>
-                  </li>
+        
                 </ul>
-                <div class="col m1"></div>
+                <div class="col m3"></div>
 
           </div>
-  <br>
-  <br>
-      <div class="row">
-        <div class="col m12 col s12 center-align">
-          <h5 class="cv">Download CV</h5>
-          <!-- <a href="" download class="btn-floating btn waves-effect waves-light"><i class="material-icons">file_download</i></a> -->
-           <a href=""  class="btn-floating btn waves-effect waves-light"><i class="material-icons">file_download</i></a>
-
-        </div>
-      </div>
     </div>
   </section>
-<!-- Footer -->
-<footer>
-  <div class="container text-center">
-    <p>Jennifer Carmen | Laboratoria Perú</p>
-  </div>
-</footer>
-
-<!-- Bootstrap core JavaScript -->
+<!-- Materialize core JavaScript -->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="vendors/materialize/js/materialize.min.js"></script>
 <script src="js/animated-scroll.js"></script>

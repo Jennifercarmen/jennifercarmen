@@ -1,5 +1,4 @@
 'use strict';
-
 var getInitialScroll = function getInitialScroll() {
   return document.documentElement.scrollTop;
 };
@@ -13,6 +12,7 @@ var animatedScrollTo = function animatedScrollTo(targetElement, time) {
       distanceToScroll = finalPosition - initialPosition,
       scrollFragment = Math.ceil(distanceToScroll / time);
   animateScroll(scrollFragment, finalPosition);
+
 };
 
 var animateScroll = function animateScroll(scrollFragment, finalPosition) {
@@ -47,6 +47,7 @@ var animatedScrollAllLinks = function animatedScrollAllLinks(time) {
       var link = _step.value;
 
       animatedScrollEvent(link, time);
+
     }
   } catch (err) {
     _didIteratorError = true;
@@ -62,6 +63,7 @@ var animatedScrollAllLinks = function animatedScrollAllLinks(time) {
       }
     }
   }
+
 };
 
 animatedScrollAllLinks(200);
