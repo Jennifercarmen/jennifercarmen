@@ -169,7 +169,7 @@ a:hover {
 
 .intro-text {
   color: #1c4c55;
-  top: 45%;
+  top: 55%;
   font-weight: 600;
 }
 
@@ -296,4 +296,19 @@ a.btn.btn-default.btn-lg {
 }
 li.list-inline-item.col.m3.s12.licontact{
   padding: 10px;
+}
+.btn, .btn-large{
+  background-color: #00b4ca;
+}
+.li-style {
+  color: white;
+  border-radius: 4px;
+  padding: 4px 9px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  background-color: #f44336;
+  display: inline-block;
+}
+.greenc{
+  border: 4px solid #c5da01;
 }
